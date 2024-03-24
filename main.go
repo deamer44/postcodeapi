@@ -16,7 +16,7 @@ func main() {
 	http.HandleFunc("/postcode", func(w http.ResponseWriter, r *http.Request) {
 		handlePostcode(w, r, pl)
 	})
-	fmt.Println("Server listening on port 8080")
+	fmt.Println("Listening on port 8080")
 	http.ListenAndServe(":8080", nil)
 }
 
