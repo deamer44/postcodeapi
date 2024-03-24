@@ -11,7 +11,7 @@ COPY go.mod ./
 RUN go mod download
 
 # Copy your Go source code
-COPY main.go .
+COPY main.go go.sum ./
 
 # Build the Go binary (replace "my-library" with your library name)
 RUN CGO_ENABLED=0 go build -o app
